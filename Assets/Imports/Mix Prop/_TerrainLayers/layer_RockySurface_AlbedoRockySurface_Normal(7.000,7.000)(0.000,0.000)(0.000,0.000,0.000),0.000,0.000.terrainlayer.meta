@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4b73f4cc80d764443bb859fbfa0ed423
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105051
+  packageName: Apocalyptic Wasteland
+  packageVersion: 1.1
+  assetPath: Assets/ApocalypticWasteland/_TerrainLayers/layer_RockySurface_AlbedoRockySurface_Normal(7.000,7.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.000.terrainlayer
+  uploadId: 317902

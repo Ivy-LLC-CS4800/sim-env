@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6d0c57507a8ba1140b9d4b39e9e6470a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105051
+  packageName: Apocalyptic Wasteland
+  packageVersion: 1.1
+  assetPath: Assets/ApocalypticWasteland/_TerrainLayers/layer_GrassTexture_Specular(4.000,4.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.000.terrainlayer
+  uploadId: 317902

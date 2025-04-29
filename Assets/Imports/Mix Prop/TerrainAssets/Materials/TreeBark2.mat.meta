@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2c2b88a48fd376949bd92d12e8e7e685
+timeCreated: 1505843813
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105051
+  packageName: Apocalyptic Wasteland
+  packageVersion: 1.1
+  assetPath: Assets/ApocalypticWasteland/TerrainAssets/Materials/TreeBark2.mat
+  uploadId: 317902

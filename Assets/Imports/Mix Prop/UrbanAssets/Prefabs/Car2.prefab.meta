@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6fbb98873b309a74899c58f95a677798
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105051
+  packageName: Apocalyptic Wasteland
+  packageVersion: 1.1
+  assetPath: Assets/ApocalypticWasteland/UrbanAssets/Prefabs/Car2.prefab
+  uploadId: 317902

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 68c18cb4d14d4b14e8f23ee9eb081e5a
+timeCreated: 1510605212
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105051
+  packageName: Apocalyptic Wasteland
+  packageVersion: 1.1
+  assetPath: Assets/ApocalypticWasteland/UrbanAssets/Prefabs/Tire1.prefab
+  uploadId: 317902

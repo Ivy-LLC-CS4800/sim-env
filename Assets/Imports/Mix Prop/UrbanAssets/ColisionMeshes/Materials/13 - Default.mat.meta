@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2d73af3e9ca56b4439299d1158633937
+timeCreated: 1528356614
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105051
+  packageName: Apocalyptic Wasteland
+  packageVersion: 1.1
+  assetPath: Assets/ApocalypticWasteland/UrbanAssets/ColisionMeshes/Materials/13
+    - Default.mat
+  uploadId: 317902

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3b290109fc857934998a776d7cf7903e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105051
+  packageName: Apocalyptic Wasteland
+  packageVersion: 1.1
+  assetPath: Assets/ApocalypticWasteland/TerrainAssets/NewLayer.terrainlayer
+  uploadId: 317902

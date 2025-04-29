@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 4b6918e9cd95c6342aa5fa3f8f377a62
+timeCreated: 1510593000
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105051
+  packageName: Apocalyptic Wasteland
+  packageVersion: 1.1
+  assetPath: Assets/ApocalypticWasteland/UrbanAssets/Prefabs/Barrel3.prefab
+  uploadId: 317902

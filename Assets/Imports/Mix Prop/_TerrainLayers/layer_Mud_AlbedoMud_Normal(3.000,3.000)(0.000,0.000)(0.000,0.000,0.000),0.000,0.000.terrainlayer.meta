@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2c941c157434f6c4d98384e6f3587959
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105051
+  packageName: Apocalyptic Wasteland
+  packageVersion: 1.1
+  assetPath: Assets/ApocalypticWasteland/_TerrainLayers/layer_Mud_AlbedoMud_Normal(3.000,3.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.000.terrainlayer
+  uploadId: 317902

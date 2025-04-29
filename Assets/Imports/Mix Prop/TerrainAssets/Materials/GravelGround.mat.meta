@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 828db420dfebc2543a97ee1f9a5d9361
+timeCreated: 1505907302
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 105051
+  packageName: Apocalyptic Wasteland
+  packageVersion: 1.1
+  assetPath: Assets/ApocalypticWasteland/TerrainAssets/Materials/GravelGround.mat
+  uploadId: 317902
