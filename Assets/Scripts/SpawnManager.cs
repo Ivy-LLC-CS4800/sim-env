@@ -4,11 +4,13 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour {
     // Variables
     [SerializeField] public Transform[] spawnPoints; // list of spawn point locations
+    [SerializeField] private DebrisType debrisTypeEnum; // include DebrisType
     public DebrisFactory debrisFactory; // the factory that creates debris objects
     [SerializeField] private int numberOfDebrisToSpawn = 8; // # of debris to spawn in the scene
     [SerializeField] private int numberOfDebrisTypeDupes = 2; // # of debris type duplicates
+    [SerializeField] private int numberOfDebrisTypes = 4; // # of debris types
     [SerializeField] private int numberOfSpawnPoints = 12; // # of spawn points set in the scene // Do not decrease this number, only increase this number if you make more spawn points
-    [SerializeField] private int updatedLengthOfArray = 0; // Check if any debris types have been taken 
+    [SerializeField] private int updatedLengthOfArray = 4; // Check if any debris types have been taken 
     // The new length to the array is synthetically updated.
     // The length of the available debris is retrieved from the last index after a debris type is not available. 
     // This makes the leftmost index(s) seen, the rightmost is the length, and the middle is skipped/ignored (however long).
@@ -23,6 +25,7 @@ public class SpawnManager : MonoBehaviour {
     /* Start is called once before the first execution of Update after the MonoBehaviour is created */
     void Start() {
         // Set the initial availableDebris and keepTrackOfTypes
+        availableDebris = new int[numberOfDebrisTypes];
         InitializeDebrisTypesTrackers();
 
         // Initialize spawn points into the Dictionary and Spawn debris
@@ -34,7 +37,8 @@ public class SpawnManager : MonoBehaviour {
     private void InitializeDebrisTypesTrackers() {
         for (int i = 0; i < 4; i++) {
             availableDebris[i] = i;
-            keepTrackOfTypes.Add((DebrisType)i, 0);
+            DebrisType typeFromInt = (DebrisType)i;
+            keepTrackOfTypes.Add(typeFromInt, 0);
         }//end for-loop
     }//end InitializeDebrisTypesTrackers()
 
