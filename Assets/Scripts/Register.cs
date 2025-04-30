@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Handles the registry of new users into the database
+/// </summary>
 public class Register : MonoBehaviour
 {
     public InputField usernameInputField;
@@ -17,6 +20,9 @@ public class Register : MonoBehaviour
     public Notification errorCall;
     public Notification successCall;
 
+    /// <summary>
+    /// Initialize and add event listeners
+    /// </summary>
     void Start()
     {
         passwordInputField.onValueChanged.AddListener(ValidatePassword);
@@ -24,7 +30,10 @@ public class Register : MonoBehaviour
         registerButton.onClick.AddListener(OnRegisterButtonClick);
     }
 
-    // Check password
+    /// <summary>
+    /// Validates Password based on length
+    /// </summary>
+    /// <param name="password"></param>
     public void ValidatePassword(string password)
     {
         bool isLengthValid = password.Length >= 6;
@@ -34,7 +43,9 @@ public class Register : MonoBehaviour
         lengthConditionText.color = isLengthValid ? validColor : invalidColor;
     }
 
-    // Method to update condition texts
+    /// <summary>
+    /// Update condition text
+    /// </summary>
     void UpdateConditionText()
     {
         lengthConditionText.text = "At least 6 characters";
@@ -42,7 +53,9 @@ public class Register : MonoBehaviour
         lengthConditionText.color = invalidColor;
     }
 
-     // Register button click event
+    /// <summary>
+    /// Handles form submission on button click
+    /// </summary>
     public void OnRegisterButtonClick()
     {
         string username = usernameInputField.text;
@@ -71,6 +84,9 @@ public class Register : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Move to main scene
+    /// </summary>
     private void ChangeToMainScene()
     {
         sceneCall.LoadMainScene();

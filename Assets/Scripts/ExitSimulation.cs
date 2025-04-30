@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Exits Simulation on Button click
+/// </summary>
 public class ExitButtonScript : MonoBehaviour
 {
     public void ExitGame()

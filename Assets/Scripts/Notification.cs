@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//<summary>
+// Enable/Disable notification gameObject UI with desired message
+//</summary>
 public class Notification : MonoBehaviour
 {
     public GameObject notificationPopup; // Reference to the notification popup panel

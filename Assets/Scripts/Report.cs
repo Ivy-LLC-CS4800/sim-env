@@ -6,6 +6,9 @@ using TMPro;
 using System.Data;
 using Mono.Data.Sqlite;  // Make sure to add the necessary SQLite DLL for Unity.
 
+/// <summary>
+/// Handles calculation and display of the report screen to the users.
+/// </summary>
 public class Report : MonoBehaviour
 {
     //public TextMeshProUGUI resultText; // Reference to the TextMeshPro GUI element to display result.
@@ -25,6 +28,9 @@ public class Report : MonoBehaviour
         DisplayTaskCompletion();
     }
 
+    /// <summary>
+    /// Displays User's name as title
+    /// </summary>
     public void DisplayTitle()
     {
         string temp = Global.GlobalUser;
@@ -32,12 +38,19 @@ public class Report : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Displays Total Score to user
+    /// </summary>
     public void DisplayScore()
     {
         string temp = Global.GlobalUser;
         GetTotalScore(temp);
     }
 
+    /// <summary>
+    /// Grabs user's score from database
+    /// </summary>
+    /// <param name="userName"></param>
     private void GetTotalScore(string userName)
     {
         string query = "SELECT total_score FROM users WHERE name = @name"; // SQL query to get the total_score for a given name.
@@ -71,6 +84,9 @@ public class Report : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Grabs data from database and displays task completion progress bars to user
+    /// </summary>
     public void DisplayTaskCompletion()
 {
     // Get the task name and completion percentage pair from DisplayTaskHelper
@@ -110,7 +126,10 @@ public class Report : MonoBehaviour
 }
 
 
-
+    /// <summary>
+    /// Grabs all tasks and percentage of completion by user from database
+    /// </summary>
+    /// <returns>Returns a Dictionary with key: String and value: int of each task along with its percentage of completion</returns>
     private Dictionary<string, int> DisplayTaskHelper()
     {
         Dictionary<string, int> taskResults = new Dictionary<string, int>();
@@ -143,6 +162,12 @@ public class Report : MonoBehaviour
         return taskResults;
     }
 
+    /// <summary>
+    /// Calculates completion of task based on subtask completion
+    /// </summary>
+    /// <param name="taskId"></param>
+    /// <param name="subtaskCount"></param>
+    /// <returns></returns>
     private float GetSubtaskCompletion(int taskId, int subtaskCount)
     {
         int completedSubtasks = 0;

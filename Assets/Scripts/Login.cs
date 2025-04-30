@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
+//<summary>
+// Takes user inputted username and password and checks against database before moving to main menu
+//</summary>
 public class Login : MonoBehaviour
 {
     public InputField usernameInputField;
@@ -16,6 +18,8 @@ public class Login : MonoBehaviour
     public Notification errorCall;
     public Notification successCall;
 
+    //TODO: Enables button behaviors with listeners
+    //Parameters: Application start
     void Start()
     {
         // Add button listeners
@@ -23,6 +27,8 @@ public class Login : MonoBehaviour
         registerButton.onClick.AddListener(OnRegisterButtonClick);
     }
 
+    //TODO: When login is clicked, takes textfields and checks them against database
+    //Parameters: login click, username, password, initialized database instance
       // Login button click event
     public void OnLoginButtonClick()
     {
@@ -48,12 +54,15 @@ public class Login : MonoBehaviour
         }
     }
 
-    // Register button click event
+    //TODO: Register button click event
+    //Parameters: Button listeners
     public void OnRegisterButtonClick()
     {
         sceneCall.LoadRegisterScene();
     }
 
+    //TODO: Changes scene to display the main menu
+    //Parameters: Button listeners, valid username, valid password, main menu scene
     private void ChangeToMainScene()
     {
         sceneCall.LoadMainScene();

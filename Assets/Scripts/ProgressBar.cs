@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
+//<summary>
+// Displays database values with a progress bar visual
+//</summary>
 public class ProgressBar : MonoBehaviour
 {
     private Slider progressBar;  // Reference to the Slider (Progress Bar)
@@ -37,6 +40,6 @@ public class ProgressBar : MonoBehaviour
             yield return null;
         }
 
-        progressBar.value = targetValue;  // Ensure it reaches the final value
+        progressBar.value = targetValue;  // Ensure it reaches the final value(s)
     }
 }
