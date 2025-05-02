@@ -3,7 +3,17 @@ guid: 41d8195e0a858c346b888a9282d6bdfe
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DirtyBrokenPot_material
+    second: {fileID: 2100000, guid: 70988f00954ef6342a314d8315349712, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 8e119fe9a752232478251898d644bb02, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

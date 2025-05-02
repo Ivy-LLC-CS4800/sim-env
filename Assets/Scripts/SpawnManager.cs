@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour {
     // Variables
-    [SerializeField] public Transform[] spawnPoints; // list of spawn point locations
+    [SerializeField] public GameObject[] spawnPoints; // list of spawn point locations
     [SerializeField] private DebrisType debrisTypeEnum; // include DebrisType
     public DebrisFactory debrisFactory; // the factory that creates debris objects
     [SerializeField] private int numberOfDebrisToSpawn = 8; // # of debris to spawn in the scene
@@ -35,7 +35,8 @@ public class SpawnManager : MonoBehaviour {
 
     /* Initialize the array of available debris and the Dictionary that keeps track of how many times a debris type was picked */
     private void InitializeDebrisTypesTrackers() {
-        for (int i = 0; i < 4; i++) {
+        keepTrackOfTypes = new Dictionary<DebrisType, int>();
+        for (int i = 0; i < numberOfDebrisTypes; i++) {
             availableDebris[i] = i;
             DebrisType typeFromInt = (DebrisType)i;
             keepTrackOfTypes.Add(typeFromInt, 0);
@@ -53,7 +54,7 @@ public class SpawnManager : MonoBehaviour {
         // Fill the spawn point dictionary
         spawnPointDictionary = new Dictionary<int, Transform>();
         for (int i = 0; i < spawnPoints.Length; i++) {
-            spawnPointDictionary.Add(i + 1, spawnPoints[i]);
+            spawnPointDictionary.Add(i + 1, spawnPoints[i].transform);
         }//end for-loop
     }//end InitializeSpawnPoints()
 
