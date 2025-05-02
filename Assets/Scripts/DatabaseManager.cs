@@ -4,18 +4,35 @@ using System.Data;  // To access SQLite commands
 using System.Security.Cryptography;
 using System.Text;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 //<summary>
 // Creates a database instance and connects it to the local device database to check usernames,passwords, and register new users
 //</summary>
 public class DatabaseManager : MonoBehaviour
 {
-    private string dbPath = "URI=file:users.db";
+    public static DatabaseManager Instance { get; private set;}
+    private string dbPath = "URI=file:" + Application.streamingAssetsPath + "/users.db";
+
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);  // Destroy duplicate instance
+        }
+        else
+        {
+            Instance = this;  // Set the instance
+            DontDestroyOnLoad(gameObject);  // Make sure it persists across scenes
+        }
+    }
 
     //TODO: Initialize database
     //Parameters: Start application
     void Start()
     {
+        Debug.Log($"Database path: {dbPath}");
         CreateDB();
         CreateTasksTable();
         CreateSubtasksTable();
@@ -28,7 +45,7 @@ public class DatabaseManager : MonoBehaviour
         using (var connection = new SqliteConnection(dbPath))
         {
             connection.Open();
-
+            Debug.Log("Database Connection Opened");
             using (var command = connection.CreateCommand())
             {
                 // Create table with username and password fields
@@ -37,6 +54,7 @@ public class DatabaseManager : MonoBehaviour
                 Debug.Log("Table created");
             }
             connection.Close();
+            Debug.Log("Database Connection Closed");
         }
     }
 
@@ -149,6 +167,7 @@ public class DatabaseManager : MonoBehaviour
         using (var connection = new SqliteConnection(dbPath))
         {
             connection.Open();
+            Debug.Log("Database TaskTable Connected");
             using (var command = connection.CreateCommand())
             {
                 command.CommandText = @"CREATE TABLE IF NOT EXISTS Tasks (
@@ -160,7 +179,10 @@ public class DatabaseManager : MonoBehaviour
                                             completion_status TEXT
                                         );";
                 command.ExecuteNonQuery();
+                Debug.Log("Tasks Table created/exsists");
             }
+            connection.Close();
+            Debug.Log("TaskTable Connection Closed");
         }
     }
 
@@ -180,6 +202,7 @@ public class DatabaseManager : MonoBehaviour
                 command.Parameters.AddWithValue("@completion_status", completionStatus);
                 command.ExecuteNonQuery();
             }
+            connection.Close();
         }
     }
 
@@ -216,6 +239,7 @@ public class DatabaseManager : MonoBehaviour
         using (var connection = new SqliteConnection(dbPath))
         {
             connection.Open();
+            Debug.Log("Database connected for TaskList");
             using (var command = connection.CreateCommand())
             {
                 command.CommandText = "SELECT * FROM Tasks";
@@ -233,9 +257,12 @@ public class DatabaseManager : MonoBehaviour
                             completion_status = reader.GetString(5)
                         };
                         tasks.Add(task);
+                        Debug.Log("Fetched Task: "+ task.name);
                     }
                 }
             }
+            connection.Close();
+            Debug.Log("TaskList connection closed");
         }
         return tasks;
     }
@@ -245,6 +272,7 @@ public class DatabaseManager : MonoBehaviour
         using (var connection = new SqliteConnection(dbPath))
         {
             connection.Open();
+            Debug.Log("Database connected to SubtaskTable");
             using (var command = connection.CreateCommand())
             {
                 command.CommandText = @"CREATE TABLE IF NOT EXISTS Subtasks (
@@ -255,7 +283,10 @@ public class DatabaseManager : MonoBehaviour
                                             FOREIGN KEY(task_id) REFERENCES Tasks(id) ON DELETE CASCADE
                                         );";
                 command.ExecuteNonQuery();
+                Debug.Log("SubtaskTable created/exists");
             }
+            connection.Close();
+            Debug.Log("SubtaskTable connection closed");
         }
     }
 
@@ -273,6 +304,7 @@ public class DatabaseManager : MonoBehaviour
                 command.Parameters.AddWithValue("@completion_status", completionStatus);
                 command.ExecuteNonQuery();
             }
+            connection.Close();
         }
     }
 
@@ -288,6 +320,7 @@ public class DatabaseManager : MonoBehaviour
                 command.Parameters.AddWithValue("@id", subtaskId);
                 command.ExecuteNonQuery();
             }
+            connection.Close();
         }
     }
 
@@ -298,6 +331,7 @@ public class DatabaseManager : MonoBehaviour
         using (var connection = new SqliteConnection(dbPath))
         {
             connection.Open();
+            Debug.Log("Database connection to SubTask Table");
             using (var command = connection.CreateCommand())
             {
                 command.CommandText = "SELECT * FROM Subtasks WHERE task_id = @task_id";
@@ -314,9 +348,12 @@ public class DatabaseManager : MonoBehaviour
                             completion_status = reader.GetString(3)
                         };
                         subtasks.Add(subtask);
+                        Debug.Log("Fetched Subtask: "+subtask.name);
                     }
                 }
             }
+            Debug.Log("Subtask Table connection closed");
+            connection.Close();
         }
 
         return subtasks;
