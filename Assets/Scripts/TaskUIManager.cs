@@ -1,43 +1,45 @@
-using UnityEngine;
-using UnityEngine.UI;
 using System.Collections.Generic;
-using TMPro;
+using UnityEngine;
 
 public class TaskUIManager : MonoBehaviour
 {
-    public Transform taskListParent;            // Parent object (e.g., VerticalLayoutGroup)
-    public GameObject taskEntryPrefab;          // Prefab for displaying a task
-    public DatabaseManager dbManager;           // Reference to your DatabaseManager script
+    public GameObject taskEntryPrefab;
+    public Transform taskContainer; // Where the current task appears
+    public DatabaseManager dbManager;
+
+    private List<DatabaseManager.TaskData> tasks;
+    private int currentTaskIndex = 0;
 
     void Start()
     {
-        PopulateTaskUI();
+        tasks = dbManager.GetAllTasks();
+        ShowCurrentTask();
     }
 
-    public void PopulateTaskUI()
+    private void ShowCurrentTask()
     {
-        // Clear old entries
-        foreach (Transform child in taskListParent)
+        // Clear existing task UI
+        foreach (Transform child in taskContainer)
         {
             Destroy(child.gameObject);
         }
 
-        List<DatabaseManager.TaskData> tasks = dbManager.GetAllTasks();
-
-        foreach (var task in tasks)
+        if (currentTaskIndex >= tasks.Count)
         {
-            GameObject taskUI = Instantiate(taskEntryPrefab, taskListParent);
-            TextMeshProUGUI textComponent = taskUI.GetComponentInChildren<TextMeshProUGUI>(); // Use Text if using Unity's Text UI
-
-            if (textComponent != null)
-            {
-                Debug.Log($"Updating text for task: {task.name}");
-                textComponent.text = $"{task.name} - {task.completion_status}";
-            }
-            else
-            {
-                Debug.LogWarning("TextMeshProUGUI component not found on taskEntryPrefab.");
-            }
+            Debug.Log("All tasks completed!");
+            return;
         }
+
+        // Instantiate current task
+        var taskData = tasks[currentTaskIndex];
+        GameObject taskObj = Instantiate(taskEntryPrefab, taskContainer);
+        TaskEntryUI taskUI = taskObj.GetComponent<TaskEntryUI>();
+        taskUI.Initialize(taskData, dbManager, OnTaskCompleted);
+    }
+
+    private void OnTaskCompleted()
+    {
+        currentTaskIndex++;
+        ShowCurrentTask();
     }
 }
