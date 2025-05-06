@@ -12737,6 +12737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mesh_protective suit
       objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: ccd6c684af22357418455a989c6ce7a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: ccd6c684af22357418455a989c6ce7a7, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -15526,8 +15530,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterModels:
-  - {fileID: 1369407875}
   - {fileID: 1983217001}
+  - {fileID: 1369407875}
   initialActiveIndex: 0
   setCameraAsChild: 1
   cameraLocalPositionOffset: {x: 0, y: 1.46, z: 0}
@@ -48842,7 +48846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9188278811865288090, guid: 45ba5550a3e809a4fbcb9111cbffedf9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
