@@ -13075,6 +13075,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: 0f536a449def9d849b537cc9f998cf5f, type: 2}
     - target: {fileID: 13700000, guid: ccd6c684af22357418455a989c6ce7a7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f5265b4112b53941b56dad53c342aec, type: 2}
+    - target: {fileID: 13700000, guid: ccd6c684af22357418455a989c6ce7a7, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 361b254d9e26b574ba3b83cfd62dbcde, type: 2}
@@ -14583,7 +14587,7 @@ SpriteRenderer:
   m_Size: {x: 3.04, y: 1.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &552583388 stripped
@@ -37181,6 +37185,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4277324470688486, guid: 9977b3626b4e35d43a749e43eefc5dfd, type: 3}
   m_PrefabInstance: {fileID: 1300777350}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1418583227 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5374777189194923282, guid: 65ede80d99fb55c408a15ac857e88a16, type: 3}
+  m_PrefabInstance: {fileID: 5051648942368014437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1418716627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40790,7 +40799,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 57.25
+  m_fontSize: 41.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -46904,7 +46913,7 @@ RectTransform:
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 417856315}
+  m_Father: {fileID: 1418583227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -57773,3 +57782,10 @@ SceneRoots:
   - {fileID: 742207694}
   - {fileID: 779840284}
   - {fileID: 335590430}
+  - {fileID: 1823561568}
+  - {fileID: 87537986}
+  - {fileID: 1022527853}
+  - {fileID: 1082204506}
+  - {fileID: 1388818582}
+  - {fileID: 1660183842}
+  - {fileID: 2026059424}
