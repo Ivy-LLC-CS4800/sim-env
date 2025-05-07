@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3909153030590718394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2639344191886757819}
+  - component: {fileID: -3061137839909098677}
+  - component: {fileID: -242281278402640499}
+  m_Layer: 0
+  m_Name: SpawnManagerScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &2639344191886757819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909153030590718394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3061137839909098677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909153030590718394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d515efdc040424bbefbd22c0a331c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 4111353367227040835, guid: cf9b7829e1241ca45b7c1bb5ab9cc0bc, type: 3}
+  - {fileID: 8026697512242921925, guid: 236dad3c9b0e29649a9295964afcc790, type: 3}
+  - {fileID: 8753473150283325215, guid: d6c8d733387be894cba19d39b38910c1, type: 3}
+  - {fileID: 3338218475951359077, guid: 9daf6d03ac7630b4f8dc2c401bf05c20, type: 3}
+  - {fileID: 1878047097996141585, guid: aeaf8918b472e4048b0e3bf2458f0093, type: 3}
+  - {fileID: 7674774840035548199, guid: 0f6f1cab3976a324f8ecacca71ffe2bd, type: 3}
+  - {fileID: 8614905958263693324, guid: b9c33baf5ab987c489332087e2a04b82, type: 3}
+  - {fileID: 7041825257954488686, guid: 7cb599e78a128d34d8b6d055084bea77, type: 3}
+  - {fileID: 53051763062932524, guid: f5bba217568caf84a96764539d11cae7, type: 3}
+  - {fileID: 4703870435870162668, guid: c79e55d8083f5eb46b7f3e8f84146ca1, type: 3}
+  - {fileID: 1235295600464310378, guid: da5c9566705d9884f97fa335d6143a5f, type: 3}
+  - {fileID: 6014633399572071984, guid: d49619ed409db0943a6f45b5e8e359c8, type: 3}
+  debrisTypeEnum: 0
+  debrisFactory: {fileID: -242281278402640499}
+  numberOfDebrisToSpawn: 8
+  numberOfDebrisTypeDupes: 2
+  numberOfDebrisTypes: 4
+  numberOfSpawnPoints: 12
+  updatedLengthOfArray: 4
+--- !u!114 &-242281278402640499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909153030590718394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faf14555ddb9d74aba8b55d44a3433f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodDebrisPrefabs:
+  - {fileID: 7471059865651366095, guid: 15f007c35f7d6a14fb2cc5fde6124218, type: 3}
+  - {fileID: 7471059865651366095, guid: 15f007c35f7d6a14fb2cc5fde6124218, type: 3}
+  metalDebrisPrefabs:
+  - {fileID: 3707552035330933870, guid: fbc5ba1e8bc5e46418f35d959ce7e7be, type: 3}
+  - {fileID: 919132149155446097, guid: e394db091debdbd44bc2c34982d4b0db, type: 3}
+  otherDebrisPrefabs:
+  - {fileID: 8509334038735288817, guid: 541bec3952057eb45b9ec9a6f17b53cd, type: 3}
+  - {fileID: 6461371690943928114, guid: cac1d44f7eedd204cbedeb158f607314, type: 3}
+  concreteDebrisPrefabs:
+  - {fileID: 6461371690943928114, guid: cac1d44f7eedd204cbedeb158f607314, type: 3}
+  - {fileID: 8867677066164027840, guid: c0c77bcbd78b0e4409f46bb058c46e3c, type: 3}
