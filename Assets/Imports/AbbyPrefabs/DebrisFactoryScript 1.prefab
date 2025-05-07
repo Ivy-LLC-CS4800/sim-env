@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3445106109213779372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8668899458723524998}
+  - component: {fileID: 7647075771963509836}
+  m_Layer: 0
+  m_Name: DebrisFactoryScript 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &8668899458723524998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445106109213779372}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7647075771963509836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445106109213779372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faf14555ddb9d74aba8b55d44a3433f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodDebrisPrefabs:
+  - {fileID: 6461371690943928114, guid: cac1d44f7eedd204cbedeb158f607314, type: 3}
+  metalDebrisPrefabs:
+  - {fileID: 6461371690943928114, guid: cac1d44f7eedd204cbedeb158f607314, type: 3}
+  otherDebrisPrefabs:
+  - {fileID: 6461371690943928114, guid: cac1d44f7eedd204cbedeb158f607314, type: 3}
+  concreteDebrisPrefabs:
+  - {fileID: 6461371690943928114, guid: cac1d44f7eedd204cbedeb158f607314, type: 3}
