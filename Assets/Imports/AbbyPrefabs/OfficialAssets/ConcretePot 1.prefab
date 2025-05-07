@@ -66,10 +66,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3127933961998112353, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3127933961998112353, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8417659359220735700}
+    - targetCorrespondingSourceObject: {fileID: 3127933961998112353, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9041229378271362906}
   m_SourcePrefab: {fileID: 100100000, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+--- !u!1 &6461371690943928114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3127933961998112353, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+  m_PrefabInstance: {fileID: 8269664499053445459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-8417659359220735700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461371690943928114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93ffb30d8299ce42a8c7a272e3c6b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <KeepWorldPosition>k__BackingField: 0
+--- !u!114 &9041229378271362906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461371690943928114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585c938882fbfee4393eb79d21896569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
