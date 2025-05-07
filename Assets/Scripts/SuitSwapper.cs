@@ -70,6 +70,13 @@ public class SuitSwapper : MonoBehaviour
     {
         if (characterModels.Length > 0 && mainCameraTransform != null)
         {
+            // move position of model to current model position
+            Vector3 lastPosition = characterModels[currentIndex].transform.position;
+            Vector3 lastRotation = characterModels[currentIndex].transform.eulerAngles;
+
+            if (setCameraAsChild)
+                mainCameraTransform.SetParent(null);
+
             // Disable the current model
             characterModels[currentIndex].SetActive(false);
 
@@ -77,15 +84,24 @@ public class SuitSwapper : MonoBehaviour
             currentIndex = (currentIndex + 1) % characterModels.Length;
 
             // Enable the new current model
-            characterModels[currentIndex].SetActive(true);
+
+            GameObject newModel = characterModels[currentIndex];
+            newModel.transform.position = lastPosition;
+            newModel.transform.eulerAngles = lastRotation;
+            newModel.SetActive(true);
 
             // Move the main camera to the new model
-            if (setCameraAsChild)
+            if (setCameraAsChild && mainCameraTransform != null)
             {
-                mainCameraTransform.SetParent(characterModels[currentIndex].transform);
+                mainCameraTransform.SetParent(newModel.transform);
                 mainCameraTransform.localPosition = cameraLocalPositionOffset;
                 mainCameraTransform.localRotation = cameraLocalRotationOffset;
             }
+
+            // move new model to same position
+            // characterModels[currentIndex].transform.position = new Vector3(positionX, positionY, positionZ);
+            Debug.Log("index: " + currentIndex + " " + characterModels[currentIndex].transform.position);
+            
         }
         else if (characterModels.Length == 0)
         {
@@ -100,9 +116,9 @@ public class SuitSwapper : MonoBehaviour
     // Handles user input to trigger suit swap on input key 'Z'
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            SwapToNextModel();
-        }
+        // if (Input.GetKeyDown(KeyCode.Z))
+        // {
+        //     SwapToNextModel();
+        // }
     }
 }
