@@ -1,3 +1,4 @@
+using log4net.Filter;
 using UnityEngine;
 
 public class DebrisFactory : MonoBehaviour, IDebrisFactory {
@@ -16,8 +17,23 @@ public class DebrisFactory : MonoBehaviour, IDebrisFactory {
 
         // Randomly select a prefab from the array
         GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
+        GameObject debrisInstance = Instantiate(prefab, position, rotation);
 
-        return Instantiate(prefab, position, rotation);
+        if(debrisInstance.GetComponent<Outline>() == null){
+            debrisInstance.AddComponent<Outline>();
+            debrisInstance.GetComponent<Outline>().enabled = false;
+        }
+        if(debrisInstance.GetComponent<PickableItem>() == null){
+            debrisInstance.AddComponent<PickableItem>();
+        }
+        if(debrisInstance.GetComponent<MeshCollider>() == null){
+            debrisInstance.AddComponent<MeshCollider>();
+        }
+        if(debrisInstance.GetComponent<Rigidbody>() == null){
+            debrisInstance.AddComponent<Rigidbody>();
+        }
+        debrisInstance.layer = LayerMask.NameToLayer("Pickable");
+        return debrisInstance;
     }//end CreateDebris()
 
     public GameObject[] GetPrefabsForType(DebrisType type) {

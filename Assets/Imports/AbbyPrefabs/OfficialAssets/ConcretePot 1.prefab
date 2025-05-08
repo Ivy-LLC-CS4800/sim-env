@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8269664499053445459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 670.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2505.568
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315826511299955931, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127933961998112353, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_Name
+      value: ConcretePot 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127933961998112353, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3127933961998112353, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1979192943092529830}
+  m_SourcePrefab: {fileID: 100100000, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+--- !u!1 &6461371690943928114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3127933961998112353, guid: 126f4d4dc12705e4e95a9e38728b80c9, type: 3}
+  m_PrefabInstance: {fileID: 8269664499053445459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1979192943092529830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461371690943928114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585c938882fbfee4393eb79d21896569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

@@ -27,7 +27,7 @@ public class PickableItem : MonoBehaviour, IPickable
             rb.isKinematic = true;
         }
         transform.localPosition = Vector3.zero; //Vector3 passes 3d directions
-        transform.localRotation = Quaternion.Euler(270f, 0f, 340f);
+        transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         transform.localScale = Vector3.one;
         return this.gameObject;
     }

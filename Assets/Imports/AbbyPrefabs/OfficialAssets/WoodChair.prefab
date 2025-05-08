@@ -58,14 +58,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a9896dfdff7ae64ea1cf813145130d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2001345837498552977}
+      addedObject: {fileID: -5414402165059066796}
   m_SourcePrefab: {fileID: 100100000, guid: 7a9896dfdff7ae64ea1cf813145130d9, type: 3}
---- !u!1 &8847116672841461433 stripped
+--- !u!1 &7471059865651366095 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a9896dfdff7ae64ea1cf813145130d9, type: 3}
-  m_PrefabInstance: {fileID: 8504533791105848296}
+  m_PrefabInstance: {fileID: 7741653179323839902}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-2001345837498552977
+--- !u!114 &-5414402165059066796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,3 +78,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xRotation: -89.98
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

@@ -87,8 +87,8 @@ public class Player : MonoBehaviour
     private void Update(){
 
         //This raycast is for useable objects
+        Debug.DrawRay(playerCameraTransform.position, playerCameraTransform.forward * hitRange, Color.blue);
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out useableHit, hitRange, useableLayerMask)){
-            Debug.DrawRay(playerCameraTransform.position, playerCameraTransform.forward * hitRange, Color.blue);
             if(inHandItem != null){
                 useableUI.SetActive(true);
                 return;
@@ -99,8 +99,8 @@ public class Player : MonoBehaviour
         }
 
         //This raycast is for pickUp objects
+        Debug.DrawRay(playerCameraTransform.position, playerCameraTransform.forward * hitRange, Color.red);
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out pickableHit, hitRange, pickableLayerMask)){
-            Debug.DrawRay(playerCameraTransform.position, playerCameraTransform.forward * hitRange, Color.red);
             pickUpUI.SetActive(true);
         
             //This block checks the last detected item to disable the outline script if the item is in the handSlot.
