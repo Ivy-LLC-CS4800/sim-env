@@ -12214,6 +12214,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -242281278402640499, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
+      propertyPath: 'woodDebrisPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8847116672841461433, guid: 15f007c35f7d6a14fb2cc5fde6124218, type: 3}
+    - target: {fileID: -242281278402640499, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
+      propertyPath: 'woodDebrisPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8847116672841461433, guid: 15f007c35f7d6a14fb2cc5fde6124218, type: 3}
+    - target: {fileID: -242281278402640499, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
+      propertyPath: 'metalDebrisPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7335744231039598635, guid: 9edde2010d2372246a08b5c9e74075e3, type: 3}
+    - target: {fileID: -242281278402640499, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
+      propertyPath: 'metalDebrisPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7716553233963676854, guid: 368b521520563bc47a42a1647a34b20d, type: 3}
+    - target: {fileID: -242281278402640499, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
+      propertyPath: 'otherDebrisPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7335744231039598635, guid: 9edde2010d2372246a08b5c9e74075e3, type: 3}
+    - target: {fileID: -242281278402640499, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
+      propertyPath: 'otherDebrisPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5419078716069751657, guid: c0c77bcbd78b0e4409f46bb058c46e3c, type: 3}
+    - target: {fileID: -242281278402640499, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
+      propertyPath: 'concreteDebrisPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 9010512127659200203, guid: 48939c5dc733dfa418d3ef132d232d57, type: 3}
+    - target: {fileID: -242281278402640499, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
+      propertyPath: 'concreteDebrisPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5419078716069751657, guid: c0c77bcbd78b0e4409f46bb058c46e3c, type: 3}
     - target: {fileID: 2639344191886757819, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -27444,6 +27476,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.5, z: 0.2}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1041578623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041578614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05763b0553ae15341b41b514a6bcfdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterModels:
+  - {fileID: 1983217001}
+  - {fileID: 1369407875}
+  initialActiveIndex: 0
+  setCameraAsChild: 1
+  cameraLocalPositionOffset: {x: 0, y: 1.46, z: 0}
+  cameraLocalRotationOffset: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1001 &1044890337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45826,6 +45877,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: ccd6c684af22357418455a989c6ce7a7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: ccd6c684af22357418455a989c6ce7a7, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 0f536a449def9d849b537cc9f998cf5f, type: 2}
@@ -45856,6 +45911,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100020, guid: ccd6c684af22357418455a989c6ce7a7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1041578621}
+    - targetCorrespondingSourceObject: {fileID: 100020, guid: ccd6c684af22357418455a989c6ce7a7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1041578623}
   m_SourcePrefab: {fileID: 100100000, guid: ccd6c684af22357418455a989c6ce7a7, type: 3}
 --- !u!1001 &1719773673
 PrefabInstance:

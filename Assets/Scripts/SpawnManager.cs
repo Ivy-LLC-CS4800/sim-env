@@ -93,7 +93,7 @@ public class SpawnManager : MonoBehaviour {
             UpdateAvailableDebris(randomType);
 
             // Create a debris with the debris factory // Instantiate a Debris object at the spawn point
-            debrisFactory.CreateDebris(randomType, spawnPoint.position, Quaternion.identity);
+            debrisFactory.CreateDebris(randomType, spawnPoint.position, spawnPoint.rotation);
         }//end for-loop
     }//end SpawnDebris()
 
