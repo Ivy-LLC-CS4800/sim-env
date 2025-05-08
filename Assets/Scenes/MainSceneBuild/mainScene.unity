@@ -58573,11 +58573,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 706338018}
   m_SourcePrefab: {fileID: 100100000, guid: 65ede80d99fb55c408a15ac857e88a16, type: 3}
---- !u!224 &5051648942368014438 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5374777189194923282, guid: 65ede80d99fb55c408a15ac857e88a16, type: 3}
-  m_PrefabInstance: {fileID: 5051648942368014437}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
