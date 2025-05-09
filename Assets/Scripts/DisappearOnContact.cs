@@ -8,7 +8,7 @@ public class DisappearOnContact : MonoBehaviour
     {
         if (collision.gameObject == targetObject) 
         {
-            DebrisTableManager.Instance.UpdateDebrisActivity(debrisId, false);
+            DebrisTableManager.Instance.UpdateDebrisActivity(gameObject.name, false);
             gameObject.SetActive(false); // Deactivate the target object on contact
             Debug.Log("Object has disappeared on contact with: " + collision.gameObject.name); // Log the name of the object that disappeared
         }       
