@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dc9c15ebaa828064484456e5c5834b60
+timeCreated: 1499468688
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Scenes/Examine System Demo.unity
+  uploadId: 666298

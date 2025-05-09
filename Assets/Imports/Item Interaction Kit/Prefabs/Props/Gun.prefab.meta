@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 17b74fe8fca3e0440b6d07ac9f10bfb7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Prefabs/Props/Gun.prefab
+  uploadId: 542880

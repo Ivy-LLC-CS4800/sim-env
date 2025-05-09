@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 57470b9378d700042988379e5d0ef95d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Prefabs/UI/EventSystem.prefab
+  uploadId: 542880

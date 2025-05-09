@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 997aad1b7f39faf4ea3dd7e157e74810
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Demo Scene/PostProcessingProfiles/Default.asset
+  uploadId: 542880

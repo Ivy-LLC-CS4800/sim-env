@@ -1,0 +1,2 @@
+Some prefabs meshes are not setup correctly thats why you cannot drag and drop and use them this is the problem with the model of the object.
+Instead you can copy item prefab from demo scene and paste it in your own scene.

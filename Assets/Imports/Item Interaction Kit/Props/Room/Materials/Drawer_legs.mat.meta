@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 51d958e3e1eea554a8ce022b88aaada3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Props/Room/Materials/Drawer_legs.mat
+  uploadId: 542880

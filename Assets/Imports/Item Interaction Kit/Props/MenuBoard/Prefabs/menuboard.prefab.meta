@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: affd85d75c3c8e54b802be2df6f1770f
+timeCreated: 1508584387
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Props/MenuBoard/Prefabs/menuboard.prefab
+  uploadId: 542880

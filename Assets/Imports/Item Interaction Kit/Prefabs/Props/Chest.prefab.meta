@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7fd658df36c75064a84460affbccabdd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Prefabs/Props/Chest.prefab
+  uploadId: 542880

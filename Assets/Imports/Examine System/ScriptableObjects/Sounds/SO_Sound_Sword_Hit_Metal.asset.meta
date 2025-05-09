@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b61bdf08d5a20e14cae3929ff7e574ae
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/ScriptableObjects/Sounds/SO_Sound_Sword_Hit_Metal.asset
+  uploadId: 666298

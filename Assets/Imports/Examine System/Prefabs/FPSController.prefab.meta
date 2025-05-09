@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0b8b94298c9fea0469628fd74769b585
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Prefabs/FPSController.prefab
+  uploadId: 666298

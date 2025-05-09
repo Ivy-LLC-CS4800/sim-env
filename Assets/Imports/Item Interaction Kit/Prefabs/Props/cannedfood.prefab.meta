@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 794dc2ab2a66dbf458ff19b4f651620a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Prefabs/Props/cannedfood.prefab
+  uploadId: 542880

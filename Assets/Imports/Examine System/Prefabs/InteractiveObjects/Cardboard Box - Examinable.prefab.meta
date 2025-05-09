@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 019c0ccbd0e84854d846ac880692229b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Prefabs/InteractiveObjects/Cardboard Box
+    - Examinable.prefab
+  uploadId: 666298

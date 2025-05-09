@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7f0df4099bc5dcf4caf03648ecb7145b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Props/Room/Materials/Wall_outside.mat
+  uploadId: 542880

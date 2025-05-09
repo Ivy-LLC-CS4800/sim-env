@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7741efeba37f0ff4497bd9abf96fc6b1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/ScriptableObjects/Sounds/SO_Sound_Examine_Interact.asset
+  uploadId: 666298

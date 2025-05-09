@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fadab12a0365ccb49a2b84dadbea8501
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Animations/BoxOpen.anim
+  uploadId: 542880

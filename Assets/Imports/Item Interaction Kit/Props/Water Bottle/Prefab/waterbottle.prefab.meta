@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 57e3542e6c16dfd40972c0b1b0899afb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Props/Water Bottle/Prefab/waterbottle.prefab
+  uploadId: 542880

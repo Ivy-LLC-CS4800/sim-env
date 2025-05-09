@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: caed35852db62204583381a817be293d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Demo Scene/PostProcessingProfiles/ExamineBlur.asset
+  uploadId: 542880

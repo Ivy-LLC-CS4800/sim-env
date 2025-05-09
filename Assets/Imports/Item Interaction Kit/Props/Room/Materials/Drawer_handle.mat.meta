@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b69823802f2fffe4d9a7578526c5cae8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Props/Room/Materials/Drawer_handle.mat
+  uploadId: 542880

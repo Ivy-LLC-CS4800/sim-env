@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e7a8393926ab7444d84b9c39454ac709
+timeCreated: 1499467287
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Scripts/Managers - One Per Scene/ExamineInteractor.cs
+  uploadId: 666298

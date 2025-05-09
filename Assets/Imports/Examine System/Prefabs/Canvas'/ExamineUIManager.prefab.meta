@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 342775ad979eec84e981da64f635132c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Prefabs/Canvas'/ExamineUIManager.prefab
+  uploadId: 666298

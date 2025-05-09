@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c748b4f3be8bea04a8a464d2c2b465a6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Props/Water Bottle/Materials/WaterBottleCap.mat
+  uploadId: 542880

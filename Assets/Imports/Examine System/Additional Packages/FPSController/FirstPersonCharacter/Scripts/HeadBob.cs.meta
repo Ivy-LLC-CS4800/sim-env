@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 83c81407209f85e4c87c0cda8b32868e
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Additional Packages/FPSController/FirstPersonCharacter/Scripts/HeadBob.cs
+  uploadId: 666298

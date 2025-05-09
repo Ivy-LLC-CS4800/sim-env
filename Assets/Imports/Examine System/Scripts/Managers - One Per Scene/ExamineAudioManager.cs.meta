@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fb880d196e9bc1b42855592de113d1b5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Scripts/Managers - One Per Scene/ExamineAudioManager.cs
+  uploadId: 666298

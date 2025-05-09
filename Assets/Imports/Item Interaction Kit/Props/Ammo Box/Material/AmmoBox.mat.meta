@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 98d04023c5a30ba468c07b985eebf1d3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Props/Ammo Box/Material/AmmoBox.mat
+  uploadId: 542880

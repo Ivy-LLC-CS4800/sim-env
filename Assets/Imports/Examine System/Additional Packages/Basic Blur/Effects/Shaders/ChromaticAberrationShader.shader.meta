@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2b4f29398d9484ccfa9fd220449f5eee
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Additional Packages/Basic Blur/Effects/Shaders/ChromaticAberrationShader.shader
+  uploadId: 666298

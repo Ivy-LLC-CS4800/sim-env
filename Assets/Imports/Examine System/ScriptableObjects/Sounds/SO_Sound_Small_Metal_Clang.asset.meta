@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 31404949c50e29b43b26f6d5ecdc2159
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/ScriptableObjects/Sounds/SO_Sound_Small_Metal_Clang.asset
+  uploadId: 666298

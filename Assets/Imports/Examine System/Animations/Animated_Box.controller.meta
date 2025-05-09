@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: edd89f445d7a75d4cbfac2babc27cba7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Animations/Animated_Box.controller
+  uploadId: 666298

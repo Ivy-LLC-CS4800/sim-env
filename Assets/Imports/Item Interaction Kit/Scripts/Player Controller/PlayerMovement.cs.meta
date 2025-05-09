@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0766124742987e347adb248a137a21c5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206780
+  packageName: Item Interaction Kit
+  packageVersion: 1.1.3
+  assetPath: Assets/Item Interaction Kit/Scripts/Player Controller/PlayerMovement.cs
+  uploadId: 542880

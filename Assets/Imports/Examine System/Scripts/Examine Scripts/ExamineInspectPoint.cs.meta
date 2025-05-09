@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 24f16c2664606ab4183359f95b328228
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Scripts/Examine Scripts/ExamineInspectPoint.cs
+  uploadId: 666298

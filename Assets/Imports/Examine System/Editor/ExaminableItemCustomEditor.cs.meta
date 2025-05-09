@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cc9e951c2f7a2f146bee00abc5f1b264
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169389
+  packageName: Examine System V1
+  packageVersion: 1.7
+  assetPath: Assets/Examine System V1.7/Editor/ExaminableItemCustomEditor.cs
+  uploadId: 666298
