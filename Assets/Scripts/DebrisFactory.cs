@@ -9,6 +9,7 @@ public class DebrisFactory : MonoBehaviour, IDebrisFactory {
     [SerializeField] public GameObject[] concreteDebrisPrefabs;
 
     public GameObject CreateDebris(DebrisType type, Vector3 position, Quaternion rotation) {
+        // Equal to the Array for the selected prefab type
         GameObject[] prefabs = GetPrefabsForType(type);
         if (prefabs == null || prefabs.Length == 0) {
             Debug.LogError($"No prefabs assigned for DebrisType: {type}");
@@ -18,21 +19,6 @@ public class DebrisFactory : MonoBehaviour, IDebrisFactory {
         // Randomly select a prefab from the array
         GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
         GameObject debrisInstance = Instantiate(prefab, position, rotation);
-
-        if(debrisInstance.GetComponent<Outline>() == null){
-            debrisInstance.AddComponent<Outline>();
-            debrisInstance.GetComponent<Outline>().enabled = false;
-        }
-        if(debrisInstance.GetComponent<PickableItem>() == null){
-            debrisInstance.AddComponent<PickableItem>();
-        }
-        if(debrisInstance.GetComponent<MeshCollider>() == null){
-            debrisInstance.AddComponent<MeshCollider>();
-        }
-        if(debrisInstance.GetComponent<Rigidbody>() == null){
-            debrisInstance.AddComponent<Rigidbody>();
-        }
-        debrisInstance.layer = LayerMask.NameToLayer("Pickable");
         return debrisInstance;
     }//end CreateDebris()
 

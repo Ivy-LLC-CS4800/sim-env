@@ -12229,7 +12229,7 @@ PrefabInstance:
     - target: {fileID: -242281278402640499, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
       propertyPath: 'metalDebrisPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 7716553233963676854, guid: 368b521520563bc47a42a1647a34b20d, type: 3}
+      objectReference: {fileID: 6940704291025771762, guid: 8c25fdd462b59fe40bc0dcb244fe8e7f, type: 3}
     - target: {fileID: -242281278402640499, guid: 2ee14206acaef9941b590b85d7b76676, type: 3}
       propertyPath: 'otherDebrisPrefabs.Array.data[0]'
       value: 
