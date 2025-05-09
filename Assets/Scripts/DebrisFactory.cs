@@ -26,13 +26,20 @@ public class DebrisFactory : MonoBehaviour, IDebrisFactory {
         if(debrisInstance.GetComponent<PickableItem>() == null){
             debrisInstance.AddComponent<PickableItem>();
         }
-        if(debrisInstance.GetComponent<MeshCollider>() == null){
-            debrisInstance.AddComponent<MeshCollider>();
+        if(debrisInstance.GetComponent<BoxCollider>() == null){
+            debrisInstance.AddComponent<BoxCollider>();
         }
         if(debrisInstance.GetComponent<Rigidbody>() == null){
-            debrisInstance.AddComponent<Rigidbody>();
+            Rigidbody rb = debrisInstance.AddComponent<Rigidbody>();
+            rb.collisionDetectionMode=CollisionDetectionMode.Continuous;
+            rb.isKinematic = true;
+        }
+        if(debrisInstance.GetComponent<DisappearOnContact>() == null){
+            debrisInstance.AddComponent<DisappearOnContact>();
+            debrisInstance.GetComponent<DisappearOnContact>().targetObject = GameObject.Find("skip3");
         }
         debrisInstance.layer = LayerMask.NameToLayer("Pickable");
+        debrisInstance.transform.localScale = new Vector3(1f,1f,1f);
         return debrisInstance;
     }//end CreateDebris()
 
