@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class iCommandController : MonoBehaviour {
     public GameObject[] allTaskCards; // Array of all task cards in the left blue panel

@@ -90,9 +90,6 @@ PrefabInstance:
       addedObject: {fileID: -2968474045003733888}
     - targetCorrespondingSourceObject: {fileID: 3707552035330933870, guid: fbc5ba1e8bc5e46418f35d959ce7e7be, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5183923939230515172}
-    - targetCorrespondingSourceObject: {fileID: 3707552035330933870, guid: fbc5ba1e8bc5e46418f35d959ce7e7be, type: 3}
-      insertIndex: -1
       addedObject: {fileID: -3265963433747686874}
     - targetCorrespondingSourceObject: {fileID: 3707552035330933870, guid: fbc5ba1e8bc5e46418f35d959ce7e7be, type: 3}
       insertIndex: -1
@@ -106,9 +103,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3033983170716594146, guid: fbc5ba1e8bc5e46418f35d959ce7e7be, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5090636538681143288}
-    - targetCorrespondingSourceObject: {fileID: 3033983170716594146, guid: fbc5ba1e8bc5e46418f35d959ce7e7be, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5582426960610037431}
   m_SourcePrefab: {fileID: 100100000, guid: fbc5ba1e8bc5e46418f35d959ce7e7be, type: 3}
 --- !u!1 &6940704291025771762 stripped
 GameObject:
@@ -198,18 +192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <KeepWorldPosition>k__BackingField: 0
---- !u!114 &5183923939230515172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6940704291025771762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da2c2a56c8f0ba84a8d139aa61351ab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &-3265963433747686874
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -297,15 +279,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &5582426960610037431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8735669050402731902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da2c2a56c8f0ba84a8d139aa61351ab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
