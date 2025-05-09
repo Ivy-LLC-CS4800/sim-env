@@ -23,43 +23,37 @@ public class SpawnManager : MonoBehaviour {
 
     // Private Array
     private int[] availableDebris; // holds the integer values for the available debris types
-    private int debrisId = 0;
 
     /* Start is called once before the first execution of Update after the MonoBehaviour is created */
-    void Start() {
-        // Set the initial availableDebris and keepTrackOfTypes
-        availableDebris = new int[numberOfDebrisTypes];
-        InitializeDebrisTypesTrackers();
+    void Start() {
+        availableDebris = new int[numberOfDebrisTypes];
+        InitializeDebrisTypesTrackers();
+        InitializeSpawnPoints();
+        SpawnDebris();
+    }//end Start()
 
-        // Initialize spawn points into the Dictionary and Spawn debris
-        InitializeSpawnPoints();
-        SpawnDebris();
-    }//end Start()
-
-    /* Initialize the array of available debris and the Dictionary that keeps track of how many times a debris type was picked */
-    private void InitializeDebrisTypesTrackers() {
-        keepTrackOfTypes = new Dictionary<DebrisType, int>();
-        for (int i = 0; i < numberOfDebrisTypes; i++) {
-            availableDebris[i] = i;
-            DebrisType typeFromInt = (DebrisType)i;
-            keepTrackOfTypes.Add(typeFromInt, 0);
-        }//end for-loop
+    private void InitializeDebrisTypesTrackers() {
+        keepTrackOfTypes = new Dictionary<DebrisType, int>();
+        for (int i = 0; i < numberOfDebrisTypes; i++) {
+            availableDebris[i] = i;
+            DebrisType typeFromInt = (DebrisType)i;
+            keepTrackOfTypes.Add(typeFromInt, 0);
+        }//end for-loop
     }//end InitializeDebrisTypesTrackers()
 
     /* Put the spawn points (just a number representing it) and their position into a Dictionary */
-    private void InitializeSpawnPoints() {
-        // Check if the array holding the spawn points has the correct max number
-        if (spawnPoints.Length != numberOfSpawnPoints) {
-            Debug.LogError($"Exactly {numberOfSpawnPoints} spawn points must be assigned.");
-            return;
-        }//end if
+    
+private void InitializeSpawnPoints() {
+        if (spawnPoints.Length != numberOfSpawnPoints) {
+            Debug.LogError($"Exactly {numberOfSpawnPoints} spawn points must be assigned.");
+            return;
+        }//end if
 
-        // Fill the spawn point dictionary
-        spawnPointDictionary = new Dictionary<int, Transform>();
-        for (int i = 0; i < spawnPoints.Length; i++) {
-            spawnPointDictionary.Add(i + 1, spawnPoints[i].transform);
-        }//end for-loop
-    }//end InitializeSpawnPoints()
+        spawnPointDictionary = new Dictionary<int, Transform>();
+        for (int i = 0; i < spawnPoints.Length; i++) {
+            spawnPointDictionary.Add(i + 1, spawnPoints[i].transform);
+        }//end for-loop
+    }//end InitializeSpawnPoints()
 
     /* A Method to randomly spawn debris at randomly selected spawn points */
     private void SpawnDebris() {
@@ -97,8 +91,6 @@ public class SpawnManager : MonoBehaviour {
 
             // Create a debris with the debris factory // Instantiate a Debris object at the spawn point
             GameObject prefab = debrisFactory.CreateDebris(randomType, spawnPoint.position, spawnPoint.rotation);
-            DebrisTableManager.Instance.AddDebris(debrisId, randomType, "Active", true, false); //should log in command
-            debrisId += 1;
         }//end for-loops
     }//end SpawnDebris()
 
@@ -188,3 +180,4 @@ public class SpawnManager : MonoBehaviour {
         return availableDebris;
     }//end UpdateAvailableDebris()
 }//end SpawnManager
+// DebrisTableManager.Instance.UpdateDebrisActivity(debrisId, false);

@@ -13,17 +13,17 @@ public class DebrisTableManager : MonoBehaviour {
         } else {
             Instance = this;  // Set the instance
             DontDestroyOnLoad(gameObject);  // Make sure it persists across scenes
-        }
-    }
+        }//end if-else
+    }//end Awake()
 
     public void Start() {
         CreateDB();
-    }
+    }//end Start()
 
     // Idea: Add specific Table Create methods to load them all, Only used for this one table
     public void CreateDB() {
         CreateDebrisTable();
-    }
+    }//end CreateDB()
 
     // Create the Debris table if not found
     public void CreateDebrisTable() {
@@ -31,71 +31,71 @@ public class DebrisTableManager : MonoBehaviour {
             connection.Open();
             Debug.Log("Database Connection Opened");
             using (var command = connection.CreateCommand()) {
-                command.CommandText = "CREATE TABLE IF NOT EXISTS debris (id INTEGER PRIMARY KEY AUTOINCREMENT, debris_num TEXT NOT NULL, type TEXT NOT NULL, status TEXT NOT NULL, is_active INTEGER NOT NULL, tool_needed INTEGER NOT NULL, prefab INTEGER);";
+                command.CommandText = "CREATE TABLE IF NOT EXISTS debris (id INTEGER PRIMARY KEY AUTOINCREMENT, prefab_guid TEXT NOT NULL, type TEXT NOT NULL, status TEXT NOT NULL, is_active INTEGER NOT NULL, tool_needed INTEGER NOT NULL, prefab INTEGER);";
                 command.ExecuteNonQuery();
-                Debug.Log("Debris Table created");
-            }
+                Debug.Log("Table created");
+            }//end using
             connection.Close();
             Debug.Log("Database Connection Closed");
-        }
-    }
+        }//end using
+    }//end CreateDebrisTable()
 
     // Add Debris to the Data Table
-    public void AddDebris(int debrisNum, DebrisType type, string status, bool isActive, bool toolNeeded) {
+    public void AddDebris(string prefabGuid, DebrisType type, string status, bool isActive, bool toolNeeded) {
         using (var connection = new SqliteConnection(dbPath)) {
             connection.Open();
             using (var command = connection.CreateCommand()) {
-                command.CommandText = @"INSERT INTO debris (debris_num, type, status, is_active, tool_needed) VALUES (@debris_num, @type, @status, @is_active, @tool_needed)";
+                command.CommandText = @"INSERT INTO debris (prefab_guid, type, status, is_active, tool_needed) VALUES (@prefab_guid, @type, @status, @is_active, @tool_needed)";
 
-                command.Parameters.AddWithValue("@prefab_guid", debrisNum);
-                command.Parameters.AddWithValue("@type", toString(type));
+                command.Parameters.AddWithValue("@prefab_guid", prefabGuid);
+                command.Parameters.AddWithValue("@type", type);
                 command.Parameters.AddWithValue("@status", status);
                 command.Parameters.AddWithValue("@is_active", isActive ? 1 : 0);
                 command.Parameters.AddWithValue("@tool_needed", toolNeeded ? 1 : 0);
                 command.ExecuteNonQuery();
 
-                Debug.Log($"Added a Debris to the Database: {debrisNum}, {type}, {status}, {isActive}, {toolNeeded}");
-            }//end using-command
+                Debug.Log($"Added a Debris to the Database: {prefabGuid}, {type}, {status}, {isActive}, {toolNeeded}");
+            }//end using
             connection.Close();
-        }//end using-connection
-    }
+        }//end using
+    }//end AddDebris()
 
-    public DebrisData GetDebris(int debrisNum) {
+    public DebrisData GetDebris(string prefabGuid) {
         DebrisData debrisData = null;
         using (var connection = new SqliteConnection(dbPath)) {
             connection.Open();
             using (var command = connection.CreateCommand()) {
-                command.CommandText = "SELECT * FROM debris WHERE debris_num = @debris_num";
-                command.Parameters.AddWithValue("@debris_num", debrisNum);
+                command.CommandText = "SELECT * FROM debris WHERE prefab_guid = @prefab_guid";
+                command.Parameters.AddWithValue("@prefab_guid", prefabGuid);
                 using (IDataReader reader = command.ExecuteReader()) {
                     if (reader.Read()) {
                         debrisData = new DebrisData {
                             id = reader.GetInt32(0),
-                            guid = reader.GetInt32(1),
+                            guid = reader.GetString(1),
                             type = reader.GetString(2),
                             isActive = reader.GetInt32(3),
                             toolNeeded = reader.GetInt32(4)
                         };
-                    }
-                }
-            }
+                    }//end if
+                }//end using-reader
+            }//end using-command
             connection.Close();
-        }
+        }//end using-connection
         return debrisData;
-    }
+    }//end GetDebris()
 
-    public void UpdateDebrisActivity(int debrisNum, bool isActive) {
+    public void UpdateDebrisActivity(string prefabGuid, bool isActive) {
         using (var connection = new SqliteConnection(dbPath)) {
             connection.Open();
             using (var command = connection.CreateCommand()) {
-                command.CommandText = "UPDATE debris SET is_active = @is_active WHERE debris_num = @debris_num";
+                command.CommandText = "UPDATE debris SET is_active = @is_active WHERE prefab_guid = @prefab_guid";
                 command.Parameters.AddWithValue("@is_active", isActive ? 1 : 0);
-                command.Parameters.AddWithValue("@debris_num", debrisNum);
+                command.Parameters.AddWithValue("@prefab_guid", prefabGuid);
                 command.ExecuteNonQuery();
-            }
+            }//end using-command
             connection.Close();
-        }
-    }
+        }//end using-connection
+    }//end UpdateDebrisActivity()
 
     // Clear the Debris table
     public void DeleteAll() {
@@ -104,10 +104,10 @@ public class DebrisTableManager : MonoBehaviour {
             using (var command = connection.CreateCommand()) {
                 command.CommandText = "DELETE FROM debris;";
                 command.ExecuteNonQuery();
-            }
+            }//end using
             connection.Close();
-        }
-    }
+        }//end using
+    }//end DeleteAll()
 
     public string toString(DebrisType debrisType) {
         switch (debrisType) {
@@ -121,13 +121,13 @@ public class DebrisTableManager : MonoBehaviour {
                 return "Concrete";
             default:
                 return "Unknown";
-        }
-    }
-}
+        }//end switch
+    }//end toString()
+}//end class
 
 public class DebrisData {
     public int id;
-    public int guid;
+    public string guid;
     public string type;
     public int isActive;
     public int toolNeeded;
