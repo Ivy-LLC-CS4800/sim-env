@@ -2,11 +2,11 @@
 using UnityEngine;
 
 public class DebrisFactory : MonoBehaviour, IDebrisFactory {
-    // Array to hold the debris prefabs
     [SerializeField] public GameObject[] woodDebrisPrefabs;
     [SerializeField] public GameObject[] metalDebrisPrefabs;
     [SerializeField] public GameObject[] otherDebrisPrefabs;
     [SerializeField] public GameObject[] concreteDebrisPrefabs;
+    [SerializeField] public GameObject DisapperOnContact;
 
     public GameObject CreateDebris(DebrisType type, Vector3 position, Quaternion rotation) {
         GameObject[] prefabs = GetPrefabsForType(type);
@@ -15,31 +15,32 @@ public class DebrisFactory : MonoBehaviour, IDebrisFactory {
             return null;
         }//end if
 
-        // Randomly select a prefab from the array
         GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
         GameObject debrisInstance = Instantiate(prefab, position, rotation);
 
-        if(debrisInstance.GetComponent<Outline>() == null){
+        if (debrisInstance.GetComponent<Outline>() == null) {
             debrisInstance.AddComponent<Outline>();
             debrisInstance.GetComponent<Outline>().enabled = false;
-        }
-        if(debrisInstance.GetComponent<PickableItem>() == null){
+        }//end if
+        if (debrisInstance.GetComponent<PickableItem>() == null) {
             debrisInstance.AddComponent<PickableItem>();
-        }
-        if(debrisInstance.GetComponent<BoxCollider>() == null){
-            debrisInstance.AddComponent<BoxCollider>();
-        }
-        if(debrisInstance.GetComponent<Rigidbody>() == null){
+        }//end if
+        if (debrisInstance.GetComponent<MeshCollider>() == null) {
+            debrisInstance.AddComponent<MeshCollider>();
+        }//end if
+        if (debrisInstance.GetComponent<Rigidbody>() == null) {
             Rigidbody rb = debrisInstance.AddComponent<Rigidbody>();
-            rb.collisionDetectionMode=CollisionDetectionMode.Continuous;
+            rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
             rb.isKinematic = true;
-        }
-        if(debrisInstance.GetComponent<DisappearOnContact>() == null){
-            debrisInstance.AddComponent<DisappearOnContact>();
-            debrisInstance.GetComponent<DisappearOnContact>().targetObject = GameObject.Find("skip3");
-        }
+        }//end if
+
         debrisInstance.layer = LayerMask.NameToLayer("Pickable");
-        debrisInstance.transform.localScale = new Vector3(1f,1f,1f);
+
+        // Assign a unique ID and log to the database
+        string debrisId = System.Guid.NewGuid().ToString();
+        debrisInstance.name = debrisId;
+        DebrisTableManager.Instance.AddDebris(debrisId, type, "Active", true, false);
+
         return debrisInstance;
     }//end CreateDebris()
 

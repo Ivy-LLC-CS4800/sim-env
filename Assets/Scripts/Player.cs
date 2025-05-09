@@ -100,9 +100,10 @@ public class Player : MonoBehaviour
 
         //This raycast is for pickUp objects
         Debug.DrawRay(playerCameraTransform.position, playerCameraTransform.forward * hitRange, Color.red);
+        
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out pickableHit, hitRange, pickableLayerMask)){
             pickUpUI.SetActive(true);
-        
+ 
             //This block checks the last detected item to disable the outline script if the item is in the handSlot.
             //First outline items when there is no last detected gameObject
             var script = pickableHit.collider.GetComponent<Outline>();
