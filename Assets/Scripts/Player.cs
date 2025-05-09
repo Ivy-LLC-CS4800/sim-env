@@ -103,9 +103,6 @@ public class Player : MonoBehaviour
         
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out pickableHit, hitRange, pickableLayerMask)){
             pickUpUI.SetActive(true);
-
-            // Log the name of the object the raycast hit
-            Debug.Log("Raycast hit: " + pickableHit.collider.gameObject.name);
  
             //This block checks the last detected item to disable the outline script if the item is in the handSlot.
             //First outline items when there is no last detected gameObject
