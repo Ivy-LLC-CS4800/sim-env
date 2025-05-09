@@ -19,6 +19,11 @@ public class DebrisFactory : MonoBehaviour, IDebrisFactory {
         GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
         GameObject debrisInstance = Instantiate(prefab, position, rotation);
 
+        
+        // Check if the mesh is readable
+        CheckMeshReadability(debrisInstance);
+
+
         if(debrisInstance.GetComponent<Outline>() == null){
             debrisInstance.AddComponent<Outline>();
             debrisInstance.GetComponent<Outline>().enabled = false;
@@ -42,6 +47,18 @@ public class DebrisFactory : MonoBehaviour, IDebrisFactory {
         debrisInstance.transform.localScale = new Vector3(1f,1f,1f);
         return debrisInstance;
     }//end CreateDebris()
+
+    
+    private void CheckMeshReadability(GameObject debrisInstance) {
+        MeshFilter meshFilter = debrisInstance.GetComponent<MeshFilter>();
+        if (meshFilter != null) {
+            Mesh mesh = meshFilter.sharedMesh;
+            if (mesh != null && !mesh.isReadable) {
+                Debug.LogWarning($"Mesh '{mesh.name}' is not readable. Enable 'Read/Write' in import settings.");
+            }
+        }
+    }
+
 
     public GameObject[] GetPrefabsForType(DebrisType type) {
         switch (type) {
