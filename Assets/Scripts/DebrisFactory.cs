@@ -19,6 +19,26 @@ public class DebrisFactory : MonoBehaviour, IDebrisFactory {
         // Randomly select a prefab from the array
         GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
         GameObject debrisInstance = Instantiate(prefab, position, rotation);
+
+        if(debrisInstance.GetComponent<Outline>() == null){
+            debrisInstance.AddComponent<Outline>();
+            debrisInstance.GetComponent<Outline>().enabled = false;
+        }//end if
+        if(debrisInstance.GetComponent<PickableItem>() == null){
+            debrisInstance.AddComponent<PickableItem>();
+        }//end if
+        if(debrisInstance.GetComponent<MeshCollider>() == null){
+            debrisInstance.AddComponent<MeshCollider>();
+            Mesh mesh = GetComponent<MeshFilter>().sharedMesh;
+            mesh.UploadMeshData(true); // Ensure the mesh data is readable
+        }//end if
+        if(debrisInstance.GetComponent<Rigidbody>() == null){
+            Rigidbody rb = debrisInstance.AddComponent<Rigidbody>();
+            rb.collisionDetectionMode=CollisionDetectionMode.Continuous;
+            rb.isKinematic = true;
+        }//end if
+        debrisInstance.layer = LayerMask.NameToLayer("Pickable");
+
         return debrisInstance;
     }//end CreateDebris()
 

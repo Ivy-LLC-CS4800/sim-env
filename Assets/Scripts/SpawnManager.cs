@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+
 
 public class SpawnManager : MonoBehaviour {
     // Variables
@@ -21,6 +23,7 @@ public class SpawnManager : MonoBehaviour {
 
     // Private Array
     private int[] availableDebris; // holds the integer values for the available debris types
+    private int debrisId = 0;
 
     /* Start is called once before the first execution of Update after the MonoBehaviour is created */
     void Start() {
@@ -93,8 +96,10 @@ public class SpawnManager : MonoBehaviour {
             UpdateAvailableDebris(randomType);
 
             // Create a debris with the debris factory // Instantiate a Debris object at the spawn point
-            debrisFactory.CreateDebris(randomType, spawnPoint.position, spawnPoint.rotation);
-        }//end for-loop
+            GameObject prefab = debrisFactory.CreateDebris(randomType, spawnPoint.position, spawnPoint.rotation);
+            DebrisTableManager.Instance.AddDebris(debrisId, randomType, "Active", true, false); //should log in command
+            debrisId += 1;
+        }//end for-loops
     }//end SpawnDebris()
 
     /* Get a random spawn point then remove it from the choices/Dictionary */
