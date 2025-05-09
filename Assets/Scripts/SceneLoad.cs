@@ -44,7 +44,7 @@ public class SceneLoader : MonoBehaviour
     /// </summary>
     public void LoadDemoScene()
     {
-        SceneManager.LoadScene("EnvTest");
+        SceneManager.LoadScene("mainScene");
     }
 
     /// <summary>
