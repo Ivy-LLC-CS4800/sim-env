@@ -26,6 +26,10 @@ public class DebrisFactory : MonoBehaviour, IDebrisFactory {
         if(debrisInstance.GetComponent<PickableItem>() == null){
             debrisInstance.AddComponent<PickableItem>();
         }
+        if(debrisInstance.GetComponent<MeshCollider>() != null){
+            MeshCollider mesh = debrisInstance.GetComponent<MeshCollider>();
+            Destroy(mesh);
+        }
         if(debrisInstance.GetComponent<BoxCollider>() == null){
             debrisInstance.AddComponent<BoxCollider>();
         }
