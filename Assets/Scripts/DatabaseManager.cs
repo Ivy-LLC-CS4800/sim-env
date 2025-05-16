@@ -83,8 +83,6 @@ public class DatabaseManager : MonoBehaviour
                 command.Parameters.Add(new SqliteParameter("@password", hashedPassword));
 
                 long result = (long)command.ExecuteScalar();
-                connection.Close();
-
                 return result > 0; // Returns true if username and password match, false otherwise
             }
         }
@@ -115,7 +113,8 @@ public class DatabaseManager : MonoBehaviour
             connection.Open();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "INSERT INTO users (name, password) VALUES (@name, @password)";
+                //command.CommandText = "INSERT INTO users (name, password) VALUES (@name, @password)";
+                command.CommandText = "INSERT INTO users (name, password, total_score) VALUES (@name, @password, 0)";
                 command.Parameters.Add(new SqliteParameter("@name", username));
                 command.Parameters.Add(new SqliteParameter("@password", hashedPassword));
                 command.ExecuteNonQuery();
@@ -358,6 +357,39 @@ public class DatabaseManager : MonoBehaviour
 
         return subtasks;
     }
+
+    public bool DeleteAccount(string username, string password)
+    {
+        try
+        {
+            using (var connection = new SqliteConnection(dbPath))
+            {
+                connection.Open();
+
+                using (var pragma = connection.CreateCommand())
+                {
+                    pragma.CommandText = "PRAGMA foreign_keys = ON;";
+                    pragma.ExecuteNonQuery();
+                }
+
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "DELETE FROM users WHERE name = @name AND password = @password";
+                    command.Parameters.AddWithValue("@name", username);
+                    command.Parameters.AddWithValue("@password", HashPassword(password));
+
+                    int rows = command.ExecuteNonQuery();
+                    return rows > 0;
+                }
+            }
+        }
+        catch (SqliteException e)
+        {
+            Debug.LogError("SQLite error during account deletion: " + e.Message);
+            return false;
+        }
+    }
+
 
 
 

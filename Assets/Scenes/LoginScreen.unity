@@ -446,8 +446,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3eb8fae2b104243a634d52ac56c9ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskListContainer: {fileID: 190993985}
   taskEntryPrefab: {fileID: 1602665806}
+  taskContainer: {fileID: 0}
+  dbManager: {fileID: 0}
 --- !u!1 &240987688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,9 +1223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskNameText: {fileID: 826751566}
   completionToggle: {fileID: 741245529}
-  showSubtasksButton: {fileID: 0}
   subtaskListParent: {fileID: 0}
   subtaskEntryPrefab: {fileID: 0}
+  taskNameBackground: {fileID: 0}
+  subtaskNameBackground: {fileID: 0}
 --- !u!224 &578882490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4155,9 +4157,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskNameText: {fileID: 2139115331}
   completionToggle: {fileID: 1482791482}
-  showSubtasksButton: {fileID: 0}
   subtaskListParent: {fileID: 190993985}
   subtaskEntryPrefab: {fileID: 1602665806}
+  taskNameBackground: {fileID: 0}
+  subtaskNameBackground: {fileID: 0}
 --- !u!1 &1650264855
 GameObject:
   m_ObjectHideFlags: 0
@@ -4955,8 +4958,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3eb8fae2b104243a634d52ac56c9ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskListContainer: {fileID: 1942669088}
   taskEntryPrefab: {fileID: 578882488}
+  taskContainer: {fileID: 0}
+  dbManager: {fileID: 0}
 --- !u!1 &2041654190
 GameObject:
   m_ObjectHideFlags: 0

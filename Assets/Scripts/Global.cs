@@ -6,5 +6,6 @@ using System;
 /// </summary>
 public static class Global
 {
-    public static string GlobalUser = "user1";
+    public static string Username;
+    public static string Password;
 }

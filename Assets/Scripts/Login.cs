@@ -45,7 +45,8 @@ public class Login : MonoBehaviour
             successCall.ShowPopup("Login successful for: " + username);
             Debug.Log("Login successful for: " + username);
             Invoke("ChangeToMainScene", delayBeforeSceneChange);
-            Global.GlobalUser = username;
+            Global.Username = username;
+            Global.Password = password;
         }
         else
         {

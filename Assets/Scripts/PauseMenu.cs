@@ -1,103 +1,91 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI; // Required for Button
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject canvasObject; // Reference to the Canvas GameObject
-    private bool isCanvasActive = false;
-    public Button resumeButton; // Reference to the Resume button
-    public Button exitButton;   // Reference to the Exit button
-    public SceneLoader sceneLoader; // Reference to the SceneLoader script
-    public MoveController moveController;
-    public FPSController fpsController;
+    public GameObject canvasObject;
+    public Button resumeButton;
+    public Button exitButton;
+    public SceneLoader sceneLoader;
+
+    private bool isPaused = false;
+    private bool allowToggle = true;
 
     void Start()
     {
-        Debug.Log("PauseMenu started");
-        canvasObject.SetActive(false); // Hide at start
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
-        if (moveController == null)
-        {
-            moveController = GetComponent<MoveController>();
-        }
+        SetPaused(false);
 
         if (resumeButton != null)
-        {
-            resumeButton.onClick.AddListener(ResumeGame);
-        }
+            resumeButton.onClick.AddListener(OnResumeButton);
         else
-        {
-            Debug.LogError("Resume button not assigned in the inspector!");
-        }
+            Debug.LogError("Resume button not assigned!");
 
         if (exitButton != null)
-        {
-            exitButton.onClick.AddListener(ExitGame);
-        }
+            exitButton.onClick.AddListener(OnExitButton);
         else
-        {
-            Debug.LogError("Exit button not assigned in the inspector!");
-        }
+            Debug.LogError("Exit button not assigned!");
     }
 
     void Update()
     {
-        if (Keyboard.current.digit8Key.wasPressedThisFrame)
+        // Handle Tab key input even when time is paused
+        if (Input.GetKeyDown(KeyCode.Tab) && allowToggle)
         {
-            ToggleCanvas();
-        }  
-         
+            if (isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
     }
 
-    void ToggleCanvas()
+    void PauseGame()
     {
-        Debug.Log(isCanvasActive);
-        isCanvasActive = !isCanvasActive;
-        canvasObject.SetActive(isCanvasActive);
-        Debug.Log("right before: " + isCanvasActive);
-        if (isCanvasActive)
+        isPaused = true;
+        canvasObject.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+        allowToggle = false; // prevent double-trigger
+    }
+
+    void ResumeGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
+        canvasObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        allowToggle = true;
+    }
+
+    void OnResumeButton()
+    {
+        ResumeGame();
+    }
+
+    void OnExitButton()
+    {
+        Time.timeScale = 1f;
+        if (sceneLoader != null)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            moveController.enabled = false; // Disable player movement
-            fpsController.enabled = false; // Disable FPS controller
+            sceneLoader.LoadReportScene();
         }
         else
         {
-            Cursor.lockState = CursorLockMode.Locked; // You might want to control this in your player script
-            Cursor.visible = false;
-            moveController.enabled = true; // Re-enable player movement
-            fpsController.enabled = true; // Re-enable FPS controller
+            Debug.LogError("SceneLoader not assigned!");
         }
     }
 
-    void CloseCanvas()
+    void SetPaused(bool pause)
     {
-        if (isCanvasActive)
-        {
-            isCanvasActive = !isCanvasActive;
-            canvasObject.SetActive(isCanvasActive);
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            moveController.enabled = true;
-            fpsController.enabled = true;
-        }
-    }
-
-    public void ResumeGame()
-    {
-        CloseCanvas(); // This will hide the canvas and resume the game
-    }
-
-    public void ExitGame()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        sceneLoader.LoadReportScene();
-#endif
+        isPaused = pause;
+        canvasObject.SetActive(pause);
+        Cursor.lockState = pause ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = pause;
+        Time.timeScale = pause ? 0f : 1f;
     }
 }
